@@ -11,6 +11,8 @@
 }
 
 body{
+  margin: 0 auto;
+  padding:0;
   ul{
   list-style-type: none;
   }
@@ -19,7 +21,7 @@ body{
   }
 }
 
-//HEADER
+//HEADER  zmniejszych marginesy, break point, zmniejszyc czcionki
 
 header{
   width: 100%;
@@ -131,8 +133,7 @@ nav{
   border:1px solid yellow;
   color:#8D8D8D;
   font-family: 'Existencelight';
-  padding-top: 2%;
-  padding-bottom:2%;
+  height: 50px;
   
   #sticky-menu{
     display: flex;
@@ -141,6 +142,7 @@ nav{
     justify-content:space-between;
     margin-left: 2%;
     margin-right: 2%;
+
   .logo{
     
     border: 1px solid yellow;
@@ -171,9 +173,18 @@ nav{
   }
 
   }
+  .sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    margin:0 auto;
+    width: 100%
+    }
 }
 
-//ICON BOX
+
+//ICON BOX ustawienie background fixed, bo wyjezdza poza  tekst
 
 .box-text{
   width: 100%;
@@ -245,7 +256,7 @@ nav{
 }
 
 
-//SECTION ABOUT US
+//SECTION ABOUT US - ustawic jako columny we flexbox
 
 .about-us{
   font-family: 'Existencelight';
@@ -310,7 +321,8 @@ nav{
         background-repeat: no-repeat;
         width: 100%;
         height: 0;
-        background-size:100%;
+        background-size:cover;
+        background-position:center center;
         margin: 0 auto;
         padding-bottom: 31%;
         text-align: center;
@@ -483,7 +495,8 @@ nav{
         background-repeat: no-repeat;
         width: 100%;
         height: 0;
-        background-size:100%;
+        background-size:cover;
+        background-position:center center;
         margin: 0 auto;
         padding-bottom: 31%;
         text-align: center;
@@ -507,6 +520,70 @@ nav{
 
       }
     }
+}
+//PORTFOLIO
+.portfolio{
+  font-family: 'Existencelight';
+  .main-width{
+    margin: 0 auto;
+    width: 70%;
+    border:1px solid yellow;
+      .head{
+        padding-bottom: 2%;
+        padding-top:2%;
+        text-align: center;
+        font-size: 30px;
+        border: 1px solid green;
+          span{
+          color: #9F449B;
+          }
+        }
+      .buttons, .watch-more{
+        text-align: center;
+        text-transform: uppercase;
+        padding: 2%;
+        span{
+          border:1px black solid;
+          display: inline;
+          padding-bottom: 10px;
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top:10px;
+          border-radius: 5px;
+          background-color: #9F449B;
+          color: white;
+        }
+      }
+      .watch-more{
+        text-transform: lowercase;
+      }
+  }
+  .portfolio-boxs{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid yellow;
+    justify-content:space-around;
+    margin: 0 auto;
+    
+    .portfolio-box{
+      text-align: center;
+      flex:1 1 auto;
+      border: 1px solid red;
+      width: 100%;
+      padding-bottom: 33%;
+
+       .image{
+        width: 50%;
+        height: 0;
+       }
+       .title{
+
+       }
+       .description{
+
+       }
+    }
+  }
 }
 
 
