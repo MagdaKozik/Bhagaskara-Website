@@ -21,13 +21,16 @@ body{
   }
 }
 
-//HEADER  zmniejszych marginesy, break point, zmniejszyc czcionki
+//HEADER  break point, 
 
 header{
   width: 100%;
   height: 0;
   background-image: url("../img/img-bg.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  background-position:center center;
   background-size:100%;
   margin: 0 auto;
   padding-bottom: 58%;
@@ -36,29 +39,26 @@ header{
 .main-width{
   margin: 0 auto;
   width: 70%;
-  border:1px solid yellow;
-
+  padding:0;
 }
 .header-text{
   color:white;
   font-family: 'Existencelight';
-  font-size: 50px;
+  font-size: 38px;
   text-align: center;
-  border: 1px solid yellow;
   margin-right: 5%;
   margin-left: 5%;
     .logo{
-      margin-top:6%;
+      padding-top:2%;
       margin-bottom: 5%;
     }
 
   h1{
-    font-size: 35px;
+    font-size: 25px;
     margin-bottom: 2%;
-    border: 1px solid green;
   }
   p{
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 5%;
   }
 }
@@ -66,11 +66,9 @@ header{
   .menu-icons{
     width: 100%;
     .scroll{
-      border: 1px solid blue;
       width: 100%;
       text-align: center;
        .arrow-bg{
-          border: 1px solid red;
           width:8%;
           height: 0;
           margin: 0 auto;
@@ -87,7 +85,6 @@ header{
   .flexbox {
     display: flex;
     flex-flow: row;
-    border: 1px solid yellow;
     justify-content:space-between;
       li{
         flex:1 1 auto;
@@ -97,8 +94,6 @@ header{
       }
 
     .icon-shape{
-
-      border: 1px solid blue;
       background-size:82% auto;
       background-position: center center;
       background-image: url("../img/shape-bg.png");
@@ -113,13 +108,11 @@ header{
     }
 
       .icon{
-        border: 1px solid yellow;
         width: 100%;
           img{
             width: 30%;
             padding-top:22%;
             padding-left:34%;
-            border: 1px solid red;
           }
 
     }
@@ -129,25 +122,20 @@ header{
 //MENU
 nav{
   margin: 0 auto;
-  width: 70%;
-  border:1px solid yellow;
+  width: 100%;
   color:#8D8D8D;
   font-family: 'Existencelight';
-  height: 50px;
-  
+  height: 60px;
   #sticky-menu{
-    display: flex;
-    flex-flow: row;
-    border: 1px solid yellow;
     justify-content:space-between;
-    margin-left: 2%;
-    margin-right: 2%;
-
+    display: block;
+    padding-left:15%;
+    padding-right:15%;
   .logo{
-    
-    border: 1px solid yellow;
+    margin:2%;
     font-size: 25px;
-    border: 1px solid green;
+    margin-left: 2%;
+    float: left;
     span{
     color: #9F449B;
     }
@@ -155,15 +143,12 @@ nav{
   .menu{
     font-size: 14px;
     text-transform: uppercase;
-    border: 1px solid brown;
-
+    float: right;
     ul{
-      border: 1px solid blue;
       padding-top:10px;
 
       li{
-        display: inline;
-        border: 1px solid yellow;
+        display: inline-block;
         margin-left: 15px;
       }
       li:hover{
@@ -176,10 +161,10 @@ nav{
   .sticky{
     position: fixed;
     top: 0;
+    right: 0;
     left: 0;
     background-color: white;
-    margin:0 auto;
-    width: 100%
+    width: 100% auto;
     }
 }
 
@@ -321,12 +306,13 @@ nav{
         background-repeat: no-repeat;
         width: 100%;
         height: 0;
+        background-attachment: fixed;
         background-size:cover;
         background-position:center center;
         margin: 0 auto;
         padding-bottom: 31%;
         text-align: center;
-        background-attachment: fixed;
+        
 
       .backgraund-image{
         
@@ -456,10 +442,14 @@ nav{
                 width: 100%;
                 height: 15px;
                 background-color:lightgray;
+
                   .status-web{
                     width: 90%;
                     height: 15px;
                     background-color:#9F449B;
+                    animation: load 3s infinite alternate;
+                   -moz-animation: load 3s infinite alternate;
+                   -webkit-animation: load 3s infinite alternate;
                   }
                   .status-graf{
                     width: 70%;
@@ -481,6 +471,13 @@ nav{
         }
       }
   }
+}
+
+@keyframes load
+{
+    animation: load 3s;
+    0% {width:0%;}
+    100% {width:90%;}
 }
 
 
